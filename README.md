@@ -50,5 +50,53 @@ graph LR
     style Cliente fill:#e1f5fe,stroke:#01579b
     style Admin fill:#fff3e0,stroke:#e65100
     style UC3 fill:#f1f8e9,stroke:#33691e
-    
+
       </pre>
+
+      Ejercicio 3.
+
+    <pre>
+      graph LR
+    %% Actores Humanos
+    Espectador((Espectador))
+    Editor((Editor de Contenido))
+    
+    %% Actor de Sistema (Externo)
+    Pasarela_Pagos[(&quot;Pasarela de Pagos&quot;)]
+
+    subgraph Plataforma_Streaming [Sistema de Streaming]
+        %% Casos de Uso Principales
+        UC1(Reproducir Película)
+        UC2(Subir Nuevo Video)
+        UC3(Renovar Suscripción)
+        
+        %% Casos de Uso Relacionados
+        UC4(Validar Suscripción)
+        UC5(Activar Subtítulos)
+    end
+
+    %% Relaciones del Espectador
+    Espectador --&gt; UC1
+    Espectador --&gt; UC3
+    
+    %% Relaciones del Editor
+    Editor --&gt; UC2
+
+    %% Relación de Inclusión (Obligatoria)
+    %% UC1 SIEMPRE necesita UC4
+    UC1 -.-&gt;|&amp;lt;&amp;lt;include&amp;gt;&amp;gt;| UC4
+
+    %% Relación de Extensión (Opcional)
+    %% UC5 es una opción extra al reproducir
+    UC5 -.-&gt;|&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;| UC1
+
+    %% Interacción con Sistema Externo
+    UC3 --- Pasarela_Pagos
+
+    %% Estilos Visuales
+    style Espectador fill:#fce4ec,stroke:#880e4f
+    style Editor fill:#e1f5fe,stroke:#01579b
+    style Pasarela_Pagos fill:#eceff1,stroke:#455a64
+    style UC4 fill:#fff9c4,stroke:#fbc02d
+    
+     </pre>
