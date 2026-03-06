@@ -59,8 +59,9 @@ Ejercicio 3.
         UC5(Activar Subtítulos)
 
         %% Relaciones internas (UML)
-        UC1 -.->|include| UC4
-        UC5 -.->|extend| UC1
+        UC1 -.->|&lt;&lt;include&gt;&gt;| UC4
+        UC3-.->|&lt;&lt;include&gt;&gt;| UC4
+        UC5 -.->|&lt;&lt;extend&gt;&gt;| UC1
     end
 
     %% Interacciones de los Actores
