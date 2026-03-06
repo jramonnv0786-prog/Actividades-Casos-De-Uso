@@ -48,6 +48,7 @@ Admin --- CU3
 
       Ejercicio 3.
 
+```mermaid
 
       graph LR
     %% Actores Humanos
@@ -86,9 +87,5 @@ Admin --- CU3
     %% Interacción con Sistema Externo
     UC3 --- Pasarela_Pagos
 
-    %% Estilos Visuales
-    style Espectador fill:#fce4ec,stroke:#880e4f
-    style Editor fill:#e1f5fe,stroke:#01579b
-    style Pasarela_Pagos fill:#eceff1,stroke:#455a64
-    style UC4 fill:#fff9c4,stroke:#fbc02d
+  ```
     
