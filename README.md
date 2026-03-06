@@ -19,9 +19,6 @@ graph LR
     Usuario --> UC1
     Usuario --> UC2
 
-    %% Estética opcional: Colores para diferenciar
-    style Usuario fill:#f9f,stroke:#333,stroke-width:2px
-    style App_Iluminacion fill:#f5f5f5,stroke:#666,stroke-dasharray: 5 5
 ```
  
  Ejercicio 2.
@@ -48,42 +45,29 @@ Ejercicio 3.
 
 ```mermaid
 
-      graph LR
-    %% Actores Humanos
+     graph LR
+    %% Actores
     Espectador((Espectador))
     Editor((Editor de Contenido))
-    
-    %% Actor de Sistema (Externo)
-    Pasarela_Pagos[(&quot;Pasarela de Pagos&quot;)]
+    Pasarela[Pasarela de Pagos]
 
-    subgraph Plataforma_Streaming [Sistema de Streaming]
-        %% Casos de Uso Principales
+    subgraph Sistema_Streaming [Plataforma de Streaming]
         UC1(Reproducir Película)
         UC2(Subir Nuevo Video)
         UC3(Renovar Suscripción)
-        
-        %% Casos de Uso Relacionados
         UC4(Validar Suscripción)
         UC5(Activar Subtítulos)
+
+        %% Relaciones internas (UML)
+        UC1 -.->|include| UC4
+        UC5 -.->|extend| UC1
     end
 
-    %% Relaciones del Espectador
-    Espectador --&gt; UC1
-    Espectador --&gt; UC3
-    
-    %% Relaciones del Editor
-    Editor --&gt; UC2
-
-    %% Relación de Inclusión (Obligatoria)
-    %% UC1 SIEMPRE necesita UC4
-    UC1 -.-&gt;|&amp;lt;&amp;lt;include&amp;gt;&amp;gt;| UC4
-
-    %% Relación de Extensión (Opcional)
-    %% UC5 es una opción extra al reproducir
-    UC5 -.-&gt;|&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;| UC1
-
-    %% Interacción con Sistema Externo
-    UC3 --- Pasarela_Pagos
+    %% Interacciones de los Actores
+    Espectador --- UC1
+    Espectador --- UC3
+    Editor --- UC2
+    UC3 --- Pasarela
 
   ```
     
