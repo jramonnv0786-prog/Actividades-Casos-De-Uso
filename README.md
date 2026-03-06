@@ -1,9 +1,9 @@
 # Actividades-Casos-De-Uso
+
 Diagramas de Casos De Uso en Mermaid
 
 Ejercicio 1.
 
-```mermaid 
 
 graph LR
     %% Definición del Actor con estilo de nodo circular
@@ -23,11 +23,9 @@ graph LR
     style Usuario fill:#f9f,stroke:#333,stroke-width:2px
     style App_Iluminacion fill:#f5f5f5,stroke:#666,stroke-dasharray: 5 5
 
-    ```
  
  Ejercicio 2.
 
-```mermaid
 
 graph LR
     %% Actores
@@ -53,11 +51,10 @@ graph LR
     style Admin fill:#fff3e0,stroke:#e65100
     style UC3 fill:#f1f8e9,stroke:#33691e
 
-    ```
+    
 
       Ejercicio 3.
 
-    ```mermaid
 
       graph LR
     %% Actores Humanos
@@ -102,4 +99,3 @@ graph LR
     style Pasarela_Pagos fill:#eceff1,stroke:#455a64
     style UC4 fill:#fff9c4,stroke:#fbc02d
     
-     ```
