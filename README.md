@@ -44,9 +44,7 @@ end
 Cliente --- CU1
 Admin --- CU3
 ```
-    
-
-      Ejercicio 3.
+Ejercicio 3.
 
 ```mermaid
 
