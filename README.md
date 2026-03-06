@@ -26,7 +26,7 @@ graph LR
  
  Ejercicio 2.
 
-
+```mermaid
 graph LR
     %% Actores
     Cliente((Cliente))
@@ -50,7 +50,7 @@ graph LR
     style Cliente fill:#e1f5fe,stroke:#01579b
     style Admin fill:#fff3e0,stroke:#e65100
     style UC3 fill:#f1f8e9,stroke:#33691e
-
+```
     
 
       Ejercicio 3.
