@@ -19,3 +19,10 @@
 
 
 ## Ejercicio 3.
+
+## UC1 y UC3 Hacia UC4: Al conectar los puntos "Reproducir Película" como "Renovar  Suscripción" con "Validar Suscripción" se establece validación de un módulo reutilizable.
+
+## Argumento Negocio: Esto garantiza que el sistema nunca entregue contenido ni procese un pago sin verificar primero el estado de la cuenta, eliminando redundancias en el código.
+
+## Extensibilidad y Opcionalidad (extend).
+## Lógica: La reproducción de la película es el "Caso Base" que funciona por sí solo. Los subtítulos son una funcionalidad que se "engancha" opcionalmente bajo demanda del usuario, lo que refleja fielmente la experiencia real en plataformas como Netflix.
