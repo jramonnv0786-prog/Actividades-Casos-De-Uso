@@ -3,7 +3,7 @@ Diagramas de Casos De Uso en Mermaid
 
 Ejercicio 1.
 
-<pre>
+```mermaid 
 graph LR
     %% Definición del Actor con estilo de nodo circular
     Usuario((Usuario))
@@ -22,7 +22,7 @@ graph LR
     style Usuario fill:#f9f,stroke:#333,stroke-width:2px
     style App_Iluminacion fill:#f5f5f5,stroke:#666,stroke-dasharray: 5 5
 
-    </pre>
+    ```
  
  Ejercicio 2.
 

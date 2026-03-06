@@ -18,3 +18,4 @@
 ## - Sentido De La Flecha: En UML, las flechas de extensión nacen del comportamiento adcional (cupón) y apunta al caso base, en este caso (La compra). Esto indica que el primero se "incorpora" en el segundo bajo ciertas condiciones. 
 
 
+## Ejercicio 3.
