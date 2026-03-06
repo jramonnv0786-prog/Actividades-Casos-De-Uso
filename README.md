@@ -28,28 +28,21 @@ graph LR
 
 ```mermaid
 graph LR
-    %% Actores
-    Cliente((Cliente))
-    Admin((Administrador))
-
-    subgraph Tienda_Online [Sistema de Tienda]
-        UC1(Comprar Producto)
-        UC2(Gestionar Stock)
-        UC3(Aplicar Cupón Descuento)
-    end
-
-    %% Interacciones principales
-    Cliente --&gt; UC1
-    Admin --&gt; UC2
-
-    %% Relación de Extensión (Opcional)
-    %% La flecha va de la extensión hacia el caso base
-    UC3 -.-&gt;|&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;| UC1
-
-    %% Estilos para mayor claridad
-    style Cliente fill:#e1f5fe,stroke:#01579b
-    style Admin fill:#fff3e0,stroke:#e65100
-    style UC3 fill:#f1f8e9,stroke:#33691e
+%% Definición de Actores
+Cliente((Cliente))
+Admin((Administrador))
+subgraph "Sistema de E-commerce"
+%% Casos de Uso
+CU1([Comprar Producto])
+CU2([Aplicar Cupón Descuento])
+CU3([Gestionar Stock])
+%% Relación de Extensión (Opcional)
+%% La flecha apunta del extensor al base
+CU2 -.->|&lt;&lt;extend&gt;&gt;| CU1
+end
+%% Relaciones de los Actores
+Cliente --- CU1
+Admin --- CU3
 ```
     
 
